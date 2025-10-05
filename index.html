@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swati Mishra - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+        opacity: 0; /* Start hidden */
+      }
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-400 { animation-delay: 400ms; }
+      .delay-500 { animation-delay: 500ms; }
+      .delay-600 { animation-delay: 600ms; }
+      .delay-700 { animation-delay: 700ms; }
+      
+      @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      body {
+        background: linear-gradient(-45deg, #fef2f2, #fff1f2, #ffe4e6, #fff1f2);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+      }
+      
+      /* Animations for the Dev Globe */
+      @keyframes globe-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes orbit-1 {
+        from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+      }
+      @keyframes orbit-2 {
+        from { transform: rotate(45deg) translateX(60px) rotate(-45deg); }
+        to { transform: rotate(405deg) translateX(60px) rotate(-405deg); }
+      }
+      @keyframes orbit-3 {
+        from { transform: rotate(-30deg) translateX(80px) rotate(30deg); }
+        to { transform: rotate(330deg) translateX(80px) rotate(-330deg); }
+      }
+      @keyframes node-pulse {
+        0% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.2); opacity: 1; }
+        100% { transform: scale(1); opacity: 0.9; }
+      }
+      /* New floating animations for hero icons */
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+
+      .globe-spin {
+          animation: globe-spin 40s linear infinite;
+          transform-origin: center;
+      }
+      .orbit-1 {
+          animation: orbit-1 25s linear infinite;
+          transform-origin: 100px 100px;
+      }
+      .orbit-2 {
+          animation: orbit-2 15s linear infinite;
+          transform-origin: 100px 100px;
+      }
+      .orbit-3 {
+          animation: orbit-3 30s linear infinite;
+          transform-origin: 100px 100px;
+      }
+      .node-pulse {
+          animation: node-pulse 3s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50 text-slate-800 font-sans antialiased">
+    <div id="root"></div>
+  </body>
+</html>
